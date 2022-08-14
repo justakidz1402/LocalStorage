@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    list-style-type: none;
+}
+.error-message{
+    color: rgb(255, 110, 110);
+}
+
+.form-group, .btn-add{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+#tableContent{
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+tr, th, td{
+    border: solid black 1px;
+    margin: 0;
+    padding: 5px;
+}
+
+button{
+    padding: 5px;
+}
