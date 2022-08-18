@@ -33,6 +33,15 @@ function addNew(){
     }
 }
 
+function removeItem(index){
+    let listStudent = localStorage.getItem("listStudent") ? JSON.parse(localStorage.getItem("listStudent")) : [];
+    let removed = listStudent.splice(index, 1);
+    console.log(removed);
+    localStorage.removeItem(removed);
+    localStorage.setItem("listStudent", JSON.stringify(listStudent));
+    render();
+}
+
 function render() {
     let listStudent = localStorage.getItem("listStudent") ? JSON.parse(localStorage.getItem("listStudent")) : [];
     let student = `
@@ -51,7 +60,7 @@ function render() {
                 <td>${value.address}</td>
                 <td>
                     <button onclick = 'editStudent(${index})'>Edit</button>
-                    <button>Delete</button>
+                    <button onclick = 'removeItem(${index})'>Delete</button>
                 </td>
             </tr>
         `
